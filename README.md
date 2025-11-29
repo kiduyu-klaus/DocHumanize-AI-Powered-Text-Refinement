@@ -38,6 +38,17 @@ DocHumanize is a command-line tool that uses Ollama's cloud-based language model
 - Preparing client-facing materials
 - Enhancing academic writing
 
+## TODO
+
+- [ ] Add support for PDF files
+- [ ] Implement configuration file for custom presets
+- [ ] Add progress indicators for batch processing
+- [ ] Support for additional LLM providers
+- [ ] Web interface for non-technical users
+- [ ] Plugin system for custom transformations
+- [ ] Multi-language support
+- [ ] Integration with popular editors (VS Code, Obsidian)
+
 ## License
 
 MIT
