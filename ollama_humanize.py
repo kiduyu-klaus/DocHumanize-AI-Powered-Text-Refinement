@@ -2,12 +2,12 @@ import requests
 import json
 
 
-def humanize_with_ollama(text, model="llama2", ollama_url="http://localhost:11434", temperature=0.7, max_tokens=2000):
+def humanize_with_ollama(text, model="cogito-2.1:671b-cloud", ollama_url="http://localhost:11434", temperature=0.7, max_tokens=2000):
     """
     Uses Ollama to humanize text by making it sound more natural and less AI-generated.
     
     :param text: the text to be humanized
-    :param model: the Ollama model to use (default: llama2)
+    :param model: the Ollama model to use (default: cogito-2.1:671b-cloud)
     :param ollama_url: the URL of the Ollama API (default: http://localhost:11434)
     :param temperature: controls randomness (0.0-1.0, higher = more creative)
     :param max_tokens: maximum number of tokens in the response
@@ -54,13 +54,13 @@ Rewritten text:"""
         raise Exception(f"Error calling Ollama: {str(e)}")
 
 
-def humanize_with_ollama_streaming(text, model="llama2", ollama_url="http://localhost:11434", 
+def humanize_with_ollama_streaming(text, model="cogito-2.1:671b-cloud", ollama_url="http://localhost:11434", 
                                    temperature=0.7, max_tokens=2000, callback=None):
     """
     Uses Ollama to humanize text with streaming output.
     
     :param text: the text to be humanized
-    :param model: the Ollama model to use (default: llama2)
+    :param model: the Ollama model to use (default: cogito-2.1:671b-cloud)
     :param ollama_url: the URL of the Ollama API (default: http://localhost:11434)
     :param temperature: controls randomness (0.0-1.0, higher = more creative)
     :param max_tokens: maximum number of tokens in the response

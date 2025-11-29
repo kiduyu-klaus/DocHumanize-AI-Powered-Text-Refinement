@@ -5,14 +5,14 @@ import os
 from ollama_humanize import humanize_with_ollama
 
 
-def process_docx(input_path, ollama_model="llama2", ollama_url="http://localhost:11434", 
+def process_docx(input_path, ollama_model="cogito-2.1:671b-cloud", ollama_url="http://localhost:11434", 
                  temperature=0.7, max_tokens=2000, preserve_formatting=True):
     """
     Reads a docx file, humanizes the text using Ollama while preserving formatting,
     and saves to a new file with '_edited' suffix.
     
     :param input_path: path to the input docx file
-    :param ollama_model: the Ollama model to use
+    :param ollama_model: the Ollama model to use (default: cogito-2.1:671b-cloud)
     :param ollama_url: the URL of the Ollama API
     :param temperature: controls randomness (0.0-1.0)
     :param max_tokens: maximum number of tokens per request
@@ -186,7 +186,7 @@ def apply_run_format(run, format_dict):
         run.font.color.rgb = format_dict['font_color']
 
 
-def batch_process_docx(directory, file_pattern="*.docx", ollama_model="llama2", 
+def batch_process_docx(directory, file_pattern="*.docx", ollama_model="cogito-2.1:671b-cloud", 
                        ollama_url="http://localhost:11434", temperature=0.7, 
                        max_tokens=2000, preserve_formatting=True):
     """
@@ -194,7 +194,7 @@ def batch_process_docx(directory, file_pattern="*.docx", ollama_model="llama2",
     
     :param directory: directory containing docx files
     :param file_pattern: pattern to match files (default: *.docx)
-    :param ollama_model: the Ollama model to use
+    :param ollama_model: the Ollama model to use (default: cogito-2.1:671b-cloud)
     :param ollama_url: the URL of the Ollama API
     :param temperature: controls randomness
     :param max_tokens: maximum tokens per request
@@ -242,14 +242,14 @@ def batch_process_docx(directory, file_pattern="*.docx", ollama_model="llama2",
     return output_files
 
 
-def process_docx_with_progress(input_path, ollama_model="llama2", ollama_url="http://localhost:11434",
+def process_docx_with_progress(input_path, ollama_model="cogito-2.1:671b-cloud", ollama_url="http://localhost:11434",
                                temperature=0.7, max_tokens=2000, preserve_formatting=True,
                                progress_callback=None):
     """
     Same as process_docx but with progress callback support.
     
     :param input_path: path to the input docx file
-    :param ollama_model: the Ollama model to use
+    :param ollama_model: the Ollama model to use (default: cogito-2.1:671b-cloud)
     :param ollama_url: the URL of the Ollama API
     :param temperature: controls randomness
     :param max_tokens: maximum tokens per request
@@ -353,5 +353,3 @@ def process_docx_with_progress(input_path, ollama_model="llama2", ollama_url="ht
         progress_callback(total_paragraphs, total_paragraphs, "Done!")
     
     return output_path
-
-
