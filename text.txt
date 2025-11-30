@@ -1,0 +1,218 @@
+********************************************************************************
+  OLLAMA HUMANIZATION TEST SUITE
+********************************************************************************
+
+⚙️  Configuration:
+   Model: cogito-2.1:671b-cloud
+   URL:   http://localhost:11434
+
+--------------------------------------------------------------------------------
+
+📋 TEST MENU:
+   1. Test Non-Streaming (short text)
+   2. Test Streaming (short text)
+   3. Test Non-Streaming (medium text)
+   4. Test Streaming (medium text)
+   5. Test Non-Streaming (long text)
+   6. Test Streaming (long text)
+   7. Compare Streaming vs Non-Streaming (medium text)
+   8. Run all tests
+   9. Exit
+
+👉 Select option (1-9): 1
+
+================================================================================
+  TEST: Non-Streaming Humanization
+================================================================================
+
+📝 Original Text:
+--------------------------------------------------------------------------------
+Artificial intelligence represents a transformative technological paradigm that encompasses
+the development of sophisticated computational systems capable of performing tasks that traditionally
+necessitate human cognitive capabilities.
+--------------------------------------------------------------------------------
+
+⏳ Processing (non-streaming)...
+
+
+❌ Error: Error calling Ollama: Ollama API returned status code 500: {'error': "unmarshal: invalid character 'u' looking for beginning of value"}
+
+
+Press Enter to continue...C:/Users/Klaus/AppData/Local/Programs/Python/Python310/python.exe c:/Users/Klaus/Documents/GitHub/DocHumanize-AI-Powered-Text-Refinement/sample.py
+
+
+--------------------------------------------------------------------------------
+
+📋 TEST MENU:
+   1. Test Non-Streaming (short text)
+   2. Test Streaming (short text)
+   3. Test Non-Streaming (medium text)
+   4. Test Streaming (medium text)
+   5. Test Non-Streaming (long text)
+   6. Test Streaming (long text)
+   7. Compare Streaming vs Non-Streaming (medium text)
+   8. Run all tests
+   9. Exit
+
+👉 Select option (1-9): 8
+
+================================================================================
+  RUNNING ALL TESTS
+================================================================================
+================================================================================
+  TEST: Non-Streaming Humanization
+================================================================================
+
+📝 Original Text:
+--------------------------------------------------------------------------------
+Artificial intelligence represents a transformative technological paradigm that encompasses 
+the development of sophisticated computational systems capable of performing tasks that traditionally
+necessitate human cognitive capabilities.
+--------------------------------------------------------------------------------
+
+⏳ Processing (non-streaming)...
+
+
+✅ Humanized Text:
+--------------------------------------------------------------------------------
+AI is changing technology by creating smart computer systems. These systems can do jobs that used to need human thinking.
+--------------------------------------------------------------------------------
+
+⏱️  Processing time: 3.15 seconds
+
+
+================================================================================
+  TEST: Streaming Humanization
+================================================================================
+
+📝 Original Text:
+--------------------------------------------------------------------------------
+Artificial intelligence represents a transformative technological paradigm that encompasses
+the development of sophisticated computational systems capable of performing tasks that traditionally
+necessitate human cognitive capabilities.
+--------------------------------------------------------------------------------
+
+⏳ Processing (streaming)...
+
+✅ Humanized Text (live):
+--------------------------------------------------------------------------------
+AI is changing technology. It creates smart computer systems that can do jobs usually needing human thinking.
+--------------------------------------------------------------------------------
+
+⏱️  Processing time: 2.77 seconds
+
+
+================================================================================
+  TEST: Streaming vs Non-Streaming Comparison
+================================================================================
+
+📝 Original Text:
+--------------------------------------------------------------------------------
+The implementation of machine learning algorithms facilitates the optimization of
+predictive analytics across diverse domains. These advanced methodologies leverage statistical
+techniques to identify patterns within large-scale datasets. Consequently, organizations can
+derive actionable insights that enhance decision-making processes and operational efficiency.
+Furthermore, the integration of neural networks has revolutionized the field by enabling
+unprecedented levels of accuracy in classification tasks.
+--------------------------------------------------------------------------------
+
+⏳ Running non-streaming test...
+✅ Non-streaming completed in 3.43 seconds
+
+⏳ Running streaming test...
+✅ Streaming completed in 3.45 seconds
+
+================================================================================
+COMPARISON RESULTS
+================================================================================
+
+🔹 Non-Streaming Output:
+--------------------------------------------------------------------------------
+Machine learning algorithms help improve predictive analytics in many areas. These methods use statistics to find patterns in large amounts of data.
+Organizations can then get useful information to make better decisions and work more efficiently. 
+Neural networks have also changed the field. They now allow for extremely accurate classification of information.
+--------------------------------------------------------------------------------
+
+🔹 Streaming Output:
+--------------------------------------------------------------------------------
+Machine learning algorithms help improve predictive analytics in many fields. 
+These tools use statistics to find patterns in large sets of data. As a result, 
+businesses can gain useful insights to make better decisions and work more efficiently. 
+Neural networks have also changed the game by making classification tasks much more accurate.
+--------------------------------------------------------------------------------
+
+📊 Performance:
+   Non-streaming: 3.43 seconds
+   Streaming:     3.45 seconds
+   Difference:    0.02 seconds (Non-streaming was faster)
+
+
+================================================================================
+  ALL TESTS COMPLETED
+
+⏳ Running non-streaming test...
+✅ Non-streaming completed in 3.43 seconds
+
+⏳ Running streaming test...
+✅ Streaming completed in 3.45 seconds
+
+================================================================================
+COMPARISON RESULTS
+================================================================================
+
+🔹 Non-Streaming Output:
+--------------------------------------------------------------------------------
+Machine learning algorithms help improve predictive analytics in many areas. These methods use statistics to find patterns in large amounts of data. Organizations can then get useful information to make better decisions and work more efficiently. Neural networks have also changed the field. They now allow for extremely accurate classification of information.
+--------------------------------------------------------------------------------
+
+🔹 Streaming Output:
+--------------------------------------------------------------------------------
+Machine learning algorithms help improve predictive analytics in many fields. These tools use statistics to find patterns in large sets of data. As a result, businesses can gain useful insights to make better decisions and work more efficiently. Neural networks have also changed the game by making classification tasks much more accurate.
+--------------------------------------------------------------------------------
+
+📊 Performance:
+   Non-streaming: 3.43 seconds
+   Streaming:     3.45 seconds
+   Difference:    0.02 seconds (Non-streaming was faster)
+
+
+================================================================================
+  ALL TESTS COMPLETED
+
+🔹 Non-Streaming Output:
+--------------------------------------------------------------------------------
+Machine learning algorithms help improve predictive analytics in many areas. These methods use statistics to find patterns in large amounts of data. Organizations can then get useful information to make better decisions and work more efficiently. Neural networks have also changed the field. They now allow for extremely accurate classification of information.
+--------------------------------------------------------------------------------
+
+🔹 Streaming Output:
+--------------------------------------------------------------------------------
+Machine learning algorithms help improve predictive analytics in many fields. These tools use statistics to find patterns in large sets of data. As a result, businesses can gain useful insights to make better decisions and work more efficiently. Neural networks have also changed the game by making classification tasks much more accurate.
+--------------------------------------------------------------------------------
+
+📊 Performance:
+   Non-streaming: 3.43 seconds
+   Streaming:     3.45 seconds
+   Difference:    0.02 seconds (Non-streaming was faster)
+
+
+================================================================================
+  ALL TESTS COMPLETED
+--------------------------------------------------------------------------------
+
+📊 Performance:
+   Non-streaming: 3.43 seconds
+   Streaming:     3.45 seconds
+   Difference:    0.02 seconds (Non-streaming was faster)
+
+
+================================================================================
+  ALL TESTS COMPLETED
+   Difference:    0.02 seconds (Non-streaming was faster)
+
+
+================================================================================
+  ALL TESTS COMPLETED
+================================================================================
+
+
+Press Enter to continue...
